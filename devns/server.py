@@ -133,7 +133,7 @@ class DevNS(object):
             )
         self._address = address
         self._encoded_address = "".join(
-            map(lambda x: chr(int(x)), address.split('.'))
+            [chr(int(x)) for x in address.split('.')]
         ).encode("latin-1")
         self._address_last_updated = datetime.utcnow()
 

@@ -35,7 +35,7 @@ def test_config_host(config, host):
     assert config.host == host
 
 
-@pytest.mark.parametrize("level", range(10, 60, 10))
+@pytest.mark.parametrize("level", list(range(10, 60, 10)))
 def test_config_log_level(logger, config, level):
     config.log_level = level
     assert config.log_level == level
